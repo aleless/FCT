@@ -1,0 +1,1455 @@
+/* Buscando OPCIONAL aparecen los estilos no necesarios */
+
+$colorLetra: #5b5b5b;
+$colorTSK: #0174c5;
+$colorTSKlight: rgba(0, 122, 194, 1);
+$colorBlanco: #fff;
+$colorBlancoGris: #f5f5f5;
+$fontTSKalt: "Lato", "Open Sans", Helvetica, sans-serif;
+
+/* Color de fondo y fuente */
+
+body {
+  background: $colorBlancoGris;
+  font-family: "Calibri";
+  color: $colorLetra !important;
+}
+
+.nav-link {
+  color: $colorLetra !important;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#region-main {
+  background: $colorBlancoGris;
+}
+
+.panel {
+  background: $colorBlanco;
+}
+
+.secondary-navigation {
+  .moremenu {
+    background: $colorBlancoGris;
+
+    .more-nav {
+      background: inherit;
+    }
+  }
+
+  .navigation {
+    background: $colorBlancoGris !important;
+  }
+}
+
+/* Sombra paneles y fondo */
+
+.coursebox,
+.course-section,
+.card {
+  background: transparent;
+  border: 1px solid transparent !important;
+}
+
+.course-section .section-item {
+  border: 1px solid transparent !important;
+  padding: 0 !important;
+}
+
+.card {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  background-color: $colorBlanco !important;
+}
+
+.main-inner {
+  background: $colorBlancoGris !important;
+  padding: 0 !important;
+}
+
+/* Sobra navbar */
+
+.navbar.fixed-top {
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Botones navbar */
+
+.nav-link {
+
+  /* OPCIONAL estilo botones navbar */
+  
+  transition: all 0.5s ease;
+  &.active,
+  &:focus {
+    box-shadow: rgba(1, 111, 188, 0.6) 0px 5px,
+      rgba(1, 111, 188, 0.4) 0px 10px, rgba(1, 111, 188, 0.2) 0px 15px,
+      rgba(1, 111, 188, 0.1) 0px 20px, rgba(1, 111, 188, 0.05) 0px 25px !important;
+    border-radius: 6px !important;
+  }
+
+  &:hover {
+    box-shadow: rgba(1, 111, 188, 0.6) 0px 5px,
+      rgba(1, 111, 188, 0.4) 0px 10px, rgba(1, 111, 188, 0.2) 0px 15px,
+      rgba(1, 111, 188, 0.1) 0px 20px, rgba(1, 111, 188, 0.05) 0px 25px;
+      border-radius: 6px;
+  }
+}
+
+.moremenu .nav-link {
+border-bottom: none !important;
+}
+
+.secondary-navigation .navigation .nav-tabs .nav-link {
+  border-radius: 5px;
+}
+
+.nav-tabs .nav-link {
+  transition: all 0.5s ease;
+
+  &.active {
+    box-shadow: rgba(1, 116, 197, 0.07) 0px 1px 1px,
+      rgba(1, 116, 197, 0.07) 0px 2px 2px, rgba(1, 116, 197, 0.07) 0px 4px 4px,
+      rgba(1, 116, 197, 0.3) 0px 8px 8px, rgba(1, 116, 197, 0.07) 0px 16px 16px !important;
+  }
+}
+
+/* FIN OPCIONAL */
+
+/* Ajustes botones */
+
+a {
+  &:hover {
+    text-decoration: none !important;
+  }
+
+  &:focus {
+    box-shadow: none !important;
+  }
+}
+
+/* OPCIONAL estilos link titulo curso, link profesor, links y controles calendario, titulo mis cursos y actividades */
+
+.backlink a,
+.felement a,
+h3 > a,
+ul.teachers > li > a,
+span.footer-link > a,
+.calendar-controls > a,
+.card-body > div > div > a,
+.activityname > a,
+a.coursename {
+  position: relative;
+  text-decoration: none !important;
+}
+
+.backlink a::before,
+.felement a::before,
+h3 > a::before,
+ul.teachers > li > a::before,
+span.footer-link > a::before,
+.calendar-controls > a::before,
+.card-body > div > div > a::before,
+.activityname > a::before,
+a.coursename::before {
+  content: "" !important;
+  position: absolute !important;
+  width: 100%;
+  height: 2px;
+  border-radius: 4px;
+  background-color: $colorTSKlight;
+  bottom: -1px !important;
+  left: 0 !important;
+  transform-origin: right !important;
+  transform: scaleX(0) !important;
+  transition: transform 0.3s ease-in-out !important;
+}
+
+.backlink a:hover::before,
+.felement a:hover::before,
+h3 > a:hover::before,
+ul.teachers > li > a:hover::before,
+span.footer-link > a:hover::before,
+.calendar-controls > a:hover::before,
+.card-body > div > div > a:hover::before,
+.activityname > a:hover::before {
+  transform-origin: left !important;
+  transform: scaleX(1) !important;
+}
+
+a {
+  &.coursename:hover::before {
+    transform-origin: left !important;
+    transform: scaleX(1) !important;
+  }
+
+  &:hover {
+    color: $colorTSKlight;
+  }
+}
+
+.activityname > a::before {
+  bottom: -1px !important;
+}
+
+button.dropdown-toggle {
+  transition: all 0.5s ease;
+
+  &:hover {
+    box-shadow: inset 0px -2px 5px -1px rgba(21, 157, 254, 0.4) !important;
+  }
+}
+
+/* FIN OPCIONAL */
+
+.btn-primary {
+  background-color: #1272a7 !important;
+  border-radius: 4px !important;
+  font-family: $fontTSKalt !important;
+}
+
+.btn,
+.btn-secondary {
+  border-radius: 4px !important;
+  font-family: $fontTSKalt !important;
+}
+
+.btn-link {
+  transition: all 0.5s ease;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    text-decoration: none !important;
+    color: $colorTSKlight !important;
+  }
+}
+
+.btn:focus,
+.btn-primary:focus,
+.btn-secondary:focus {
+  box-shadow: none !important;
+  background: transparent !important;
+  color: #333 !important;
+}
+
+/* OPCIONAL estilo botones */
+
+.btn.btn-primary,
+button.btn.btn-primary,
+input.btn.btn-primary {
+  position: relative;
+  border: 1px solid transparent;
+  color: $colorBlanco;
+  transition: all 0.5s ease;
+}
+
+.btn.btn-primary {
+  &::before,
+  &::after {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transition: all 0.3s;
+    content: "";
+  }
+}
+
+button.btn.btn-primary::before,
+input.btn.btn-primary::before,
+button.btn.btn-primary::after,
+input.btn.btn-primary::after {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  transition: all 0.3s;
+  content: "";
+}
+
+.btn.btn-primary::before,
+button.btn.btn-primary::before,
+input.btn.btn-primary::before {
+  width: 100%;
+  left: 0;
+  border-radius: 5px;
+  background-color: $colorTSK;
+  z-index: -1;
+}
+
+.btn.btn-primary::after,
+button.btn.btn-primary::after,
+input.btn.btn-primary::after {
+  width: 0;
+  left: 50%;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  transform: translate(-50%, 0);
+  z-index: 1;
+}
+
+.btn.btn-primary:hover,
+button.btn.btn-primary:hover,
+input.btn.btn-primary:hover {
+  background: transparent !important;
+  color: $colorTSK;
+  border: 1px solid transparent;
+  transition: all 0.5s ease;
+}
+
+.btn.btn-primary:hover::before,
+button.btn.btn-primary:hover::before,
+input.btn.btn-primary:hover::before {
+  transform: scale(0, 1);
+}
+
+.btn.btn-primary:hover::after,
+button.btn.btn-primary:hover::after,
+input.btn.btn-primary:hover::after {
+  width: 100%;
+  border-color: $colorTSK;
+  transition-delay: 0.2s;
+}
+
+button {
+  &.btn-secondary,
+  &.btn.btn-outline-primary {
+    position: relative;
+    background: transparent !important;
+    border-color: $colorLetra;
+    color: $colorLetra;
+  }
+}
+
+input.btn.btn-outline-primary {
+  position: relative;
+  background: transparent !important;
+  border-color: $colorLetra;
+  color: $colorLetra;
+}
+
+button {
+  &.btn-secondary {
+    &::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-color: $colorTSK;
+      border-radius: 3px;
+      border-style: solid;
+      transition: all 0.35s;
+      content: "";
+      z-index: 1;
+    }
+  }
+
+  &.btn.btn-outline-primary::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-color: $colorTSK;
+    border-radius: 3px;
+    border-style: solid;
+    transition: all 0.35s;
+    content: "";
+    z-index: 1;
+  }
+}
+
+input.btn.btn-outline-primary::before,
+button.btn.btn-outline-primary::after,
+input.btn.btn-outline-primary::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-color: $colorTSK;
+  border-radius: 3px;
+  border-style: solid;
+  transition: all 0.35s;
+  content: "";
+  z-index: 1;
+}
+
+button {
+  &.btn-secondary::before,
+  &.btn.btn-outline-primary::before {
+    width: 0;
+    height: 100%;
+    border-width: 1px 0 1px 0;
+  }
+}
+
+input.btn.btn-outline-primary::before {
+  width: 0;
+  height: 100%;
+  border-width: 1px 0 1px 0;
+}
+
+button {
+  &.btn-secondary::after,
+  &.btn.btn-outline-primary::after {
+    width: 100%;
+    height: 0;
+    border-width: 0 1px 0 1px;
+  }
+}
+
+input.btn.btn-outline-primary::after {
+  width: 100%;
+  height: 0;
+  border-width: 0 1px 0 1px;
+}
+
+button {
+  &.btn-secondary:hover,
+  &.btn.btn-outline-primary:hover {
+    border-color: $colorTSK;
+    color: $colorTSK;
+    box-shadow: rgba(1, 116, 197, 0.34) 0px 3px 8px;
+  }
+}
+
+input.btn.btn-outline-primary:hover {
+  border-color: $colorTSK;
+  color: $colorTSK;
+  box-shadow: rgba(1, 116, 197, 0.34) 0px 3px 8px;
+}
+
+button {
+  &.btn-secondary:hover::before,
+  &.btn.btn-outline-primary:hover::before {
+    width: 100%;
+    border-width: 1px 0 1px 0;
+  }
+}
+
+input.btn.btn-outline-primary:hover::before {
+  width: 100%;
+  border-width: 1px 0 1px 0;
+}
+
+button {
+  &.btn-secondary:hover::after,
+  &.btn.btn-outline-primary:hover::after {
+    height: 100%;
+    border-width: 0 1px 0 1px;
+  }
+}
+
+input.btn.btn-outline-primary:hover::after {
+  height: 100%;
+  border-width: 0 1px 0 1px;
+}
+
+/* FIN OPCIONAL */
+
+/* Botones mis cursos */
+
+#page-my-index .my-action-buttons {
+  margin-bottom: 10px;
+}
+
+/* Botones settings */
+
+.settingsform > ul > li > .nav-link {
+  background: $colorBlancoGris !important;
+
+  &:active,
+  &:focus {
+    border-bottom-color: #0f6cbf !important;
+    border-bottom: solid 3px transparent;
+  }
+}
+
+.nav-tabs {
+  .nav-link.active,
+  .nav-item.show .nav-link {
+    border-bottom-color: #0f6cbf !important;
+    border-bottom: solid 3px transparent;
+  }
+}
+
+.dropdown-item {
+  transition: all 0.5s ease;
+
+  &:focus {
+    border: 0px transparent !important;
+  }
+  &:hover {
+    background-color: rgba(0, 122, 194, 0.9) !important;
+  }
+}
+
+/* Ajustes de border-radius */
+
+div,
+#page.drawers .main-inner,
+.activity-item,
+.sitetopic .section-item,
+.card,
+.rounded,
+.custom-select,
+.list-group,
+input {
+  border-radius: 4px !important;
+}
+
+#frontpage-available-course-list .coursebox,
+#frontpage-course-list .coursebox,
+.course-search-result .coursebox {
+  border-radius: 2px;
+  margin: 14px;
+}
+
+/* Ajustes del logo */
+
+.logo,
+me-1 {
+  height: 50px;
+  position: relative;
+  float: left;
+  max-height: 55px !important;
+}
+
+.navbar-brand:focus {
+  box-shadow: none !important;
+}
+
+/* Ajustar tamaño nav */
+
+.navbar {
+  padding: 0.5rem 0 0 0;
+  height: 51px !important;
+}
+
+/* Ajustar tamaño botones nav */
+
+.primary-navigation .navigation .nav-link {
+  height: 55px !important;
+}
+
+/* Dropdown usuario */
+
+#user-menu-toggle {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  animation: deMiniGrow forwards 0.2s;
+
+  &:hover {
+    animation: miniGrow forwards 0.4s;
+    box-shadow: rgba(1, 116, 197, 0.6) 0px 5px,
+      rgba(1, 116, 197, 0.4) 0px 10px, rgba(1, 116, 197, 0.2) 0px 15px,
+      rgba(1, 116, 197, 0.1) 0px 20px, rgba(1, 116, 197, 0.05) 0px 25px !important;
+  }
+}
+
+.carousel-item > a {
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    transition: background-color 0.3s ease;
+  }
+}
+
+.dropdown {
+  &:not(.show) > .dropdown-menu {
+    display: block !important;
+    opacity: 0 !important;
+    transition: all 0.4s ease-in-out !important;
+    overflow: hidden !important;
+    visibility: hidden;
+  }
+
+  &.show > .dropdown-menu {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 20px 30px;
+    opacity: 1 !important;
+    transition: all 0.4s ease-in-out !important;
+    max-height: 400px !important;
+  }
+}
+
+.navbar-expand .navbar-nav .dropdown-menu {
+  transition: all 0.4s ease-in-out !important;
+  overflow: hidden !important;
+}
+
+/* Evitar colapso de navbar */
+
+.navbar-collapse.collapse {
+  display: block !important;
+}
+
+.navbar-nav {
+  float: left !important;
+
+  > li {
+    float: left !important;
+  }
+
+  &.navbar-right:last-child {
+    margin-right: -15px !important;
+  }
+}
+
+.navbar-right {
+  float: right !important;
+}
+
+/* Ocultar boton mensajes */
+
+a.popover-region-toggle:has(> i.fa-message) {
+  display: none;
+  visibility: hidden;
+  pointer-events: none !important;
+}
+
+.popover-region {
+  margin-right: -15px;
+}
+
+/* Ocultar boton cajon de bloques */
+/* Ocultar boton flotante ayuda */
+
+.drawer-right-toggle,
+footer.footer-popover > div > button.btn.btn-icon {
+  visibility: hidden;
+}
+
+/* Pagina principal */
+
+#page-header {
+  > .w-100 {
+    text-align: center;
+  }
+
+  .page-header-headings {
+    text-align: center;
+    width: 100%;
+  }
+
+  .me-auto {
+    flex: 1;
+  }
+}
+
+.align-items-center:has(> .me-auto) {
+  display: inline-block !important;
+  text-transform: uppercase;
+}
+
+.activity {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.continuebutton {
+  margin: 45px 0;
+
+  & button {
+    width: 200px;
+    letter-spacing: 5px;
+  }
+}
+
+/* Hover sobre curso mostrar descripcion */
+
+.courseimage {
+  position: relative;
+  overflow: hidden;
+
+  img {
+    transition: opacity 0.4s ease;
+  }
+
+  &.has-summary:hover img {
+    opacity: 0.5;
+  }
+
+  .hidden-summary {
+    position: absolute;
+    top: 40%;
+    left: 48.7%;
+    transform: translate(-50%, -50%);
+    color: $colorBlanco;
+    background: rgba(0, 0, 0, 0.7);
+    margin: 16.5px 5px 5px !important;
+
+    /* Fondo semitransparente */
+    padding: 10px !important;
+    border-radius: 5px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+
+    /* Evita que interfiera con el hover */
+    width: 80%;
+    height: 60%;
+    overflow: auto !important;
+  }
+
+  &.has-summary:hover .hidden-summary {
+    opacity: 1;
+
+    /* Muestra el texto al hacer hover */
+    pointer-events: auto;
+    overflow: auto;
+    margin: 16.5px 5px 5px !important;
+  }
+}
+
+/* Resize caja cursos */
+
+.coursebox {
+  width: 370px;
+  height: 310px;
+  display: inline-flex;
+  margin: 10px;
+  background: $colorBlanco;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+
+  > {
+    .info {
+      text-align: center;
+      display: inline;
+    }
+
+    .content > .d-flex {
+      display: inline !important;
+    }
+  }
+}
+
+/* Panel cursos */
+
+#frontpage-available-course-list {
+  margin-top: 30px;
+}
+
+/* Titulo cursos */
+
+.coursebox {
+  > .info > .coursename {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  .content .courseimage > a > img {
+    max-height: 185px !important;
+    min-height: 185px !important;
+    max-width: 300px !important;
+    min-width: 300px !important;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+}
+
+/* Imagen cursos */
+
+.courseimage {
+  text-align: center;
+  height: 190px;
+  margin: 15px 5px 18px !important;
+  animation: deMedGrow 0.3s forwards;
+
+  > a:focus {
+    box-shadow: none !important;
+    background-color: transparent !important;
+  }
+}
+
+.coursebox {
+  transition: all 0.6s ease !important;
+
+  &:hover {
+    transition: all 0.6s ease !important;
+
+    &:has(.courseimage) {
+      box-shadow: rgba(23, 158, 254, 0.3) 0px 7px 29px 0px !important;
+      transition: all 0.6s ease !important;
+    }
+
+    .courseimage {
+      animation: medGrow 0.3s forwards;
+      cursor: pointer;
+    }
+  }
+}
+
+/* Profesor cursos */
+
+.flex-grow-1 {
+  display: inline;
+  align-items: center;
+  text-align: center;
+}
+
+/* Ajustes sidebar indice del curso */
+
+.drawer-left {
+  height: 70%;
+  background: $colorBlancoGris;
+}
+
+/* Indice de cursos mas legible */
+
+.text-truncate {
+  white-space: normal;
+}
+
+/* Crear o Config Curso */
+
+.btn.btn-icon.icons-collapse-expand {
+  color: $colorLetra;
+  background: $colorBlancoGris;
+
+  &:hover {
+    color: $colorBlancoGris;
+    outline: none !important;
+    background: $colorTSK !important;
+    opacity: 0.7;
+  }
+
+  &:focus {
+    background: transparent !important;
+    color: $colorTSK;
+    animation: grow 0.3s forwards;
+    box-shadow: none !important;
+  }
+}
+
+.custom-select,
+.dropdown {
+  border-radius: 4px !important;
+  transition: all 0.5s;
+}
+
+.custom-select {
+  &.active::after {
+    transform: translateY(-50%) rotate(180deg);
+
+    /* Rotación al hacer clic */
+    opacity: 1;
+
+    /* Asegúrate de que no desaparezca */
+  }
+
+  &:focus {
+    box-shadow: none !important;
+  }
+}
+
+.tox-editor-header {
+  z-index: 0 !important;
+}
+
+.forumpost {
+  background-color: $colorBlanco;
+}
+
+/* Scale de los iconos al hover pero no los del cajon de subir archivos */
+
+i:not(.fa-arrow-circle-o-down) {
+  scale: 1;
+  transition: all 0.5s ease;
+  &:hover {
+    scale: 1.2;
+    text-shadow: 2px 1px 4px rgba(101, 191, 254, 0.8);
+  };
+}
+
+/* Seccion Mis Cursos */
+
+.no-gutters,
+.g-0 {
+  margin: 10px auto;
+}
+
+.course-card {
+  padding: 10px;
+  overflow: hidden;
+  max-height: 270px;
+
+  > a {
+    animation: deGrow 0.3s forwards;
+    transition: transform 0.3s ease, margin-bottom 0.3s ease;
+
+    &:focus {
+      box-shadow: none !important;
+    }
+  }
+
+  &:hover > a {
+    animation: grow 0.3s forwards;
+    margin-bottom: 20px;
+  }
+}
+
+.coursename {
+  text-transform: uppercase;
+  font-size: 17px;
+}
+
+.text-muted {
+  margin-top: 20px;
+  display: grid !important;
+}
+
+.card-footer {
+  position: relative;
+
+  &:last-child {
+    padding: 0 !important;
+  }
+
+  .dropdown {
+    .dropdown-menu {
+      z-index: 1050 !important;
+      top: -180% !important;
+      left: -470% !important;
+      right: 19%;
+      transform: none !important;
+    }
+
+    button {
+      animation: deGrow 0.2s forwards;
+      transition: transform 0.2s ease;
+      color: $colorLetra !important;
+
+      &:hover {
+        box-shadow: none !important;
+        background: transparent !important;
+        animation: grow 0.2s forwards;
+      }
+
+      &:focus {
+        box-shadow: none !important;
+        background: transparent !important;
+      }
+
+      &:active {
+        background: transparent !important;
+      }
+    }
+  }
+}
+
+.drawers .block_myoverview > .card-body {
+  text-align: center;
+  padding-top: 20px !important;
+  background-color: $colorBlancoGris !important;
+  box-shadow: none !important;
+}
+
+.card-grid .card {
+  background: $colorBlanco !important;
+  overflow: hidden;
+}
+
+#inst5 {
+  background: $colorBlancoGris !important;
+  box-shadow: none !important;
+}
+
+/* Fix hover titulo cursos */
+
+.mb-1 {
+  margin-bottom: 0 !important;
+}
+
+/* Vista lista Mis Cursos */
+
+.dropdown:not(.card-footer .dropdown) > .coursemenubtn {
+  margin: 25px 20px 20px;
+}
+
+.coursemenubtn {
+  &:hover,
+  &:focus,
+  &:active {
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+}
+
+.course-listitem {
+  margin: 0 50px 10px;
+  padding: 17px 30px 17px 20px !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.summary:not(.courseimage .summary) {
+  max-height: 90px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  margin-bottom: 10px;
+}
+
+/* Vista lista */
+
+[id^="page-container-"] > div > {
+  /* Vista resumen */
+
+  ul > li > div > div.col-md-9.d-flex.flex-column > div > span.badge {
+    margin-left: 80%;
+  }
+
+  div
+    > div
+    > div
+    > div.col-md-9.d-flex.flex-column
+    > div.d-flex.flex-wrap
+    > span.badge {
+    margin-left: 80%;
+    position: relative;
+    top: -41px;
+  }
+}
+
+/* Vista tarjeta */
+
+.course-info-container > div > div > div:nth-child(3) > span {
+  margin-left: 18%;
+  margin-top: 4%;
+}
+
+/* Area Personal */
+
+.bottom {
+  text-align: center !important;
+  font-size: 18px;
+  font-family: "Calibri";
+  margin: 57px auto !important;
+  margin-top: 10px !important;
+  background: $colorBlancoGris;
+  padding: 0 0 8px 0;
+  width: 50% !important;
+  border-top: none !important;
+}
+
+#calendar-course-filter-1:focus {
+  box-shadow: none !important;
+}
+
+/* Footer area personal */
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 0 75px 0 75px;
+  font-family: $fontTSKalt !important;
+  font-size: 88%;
+  color: $colorLetra;
+  background: $colorBlancoGris;
+}
+
+/* Calendario Area Personal */
+
+.maincalendar .calendarmonth {
+  th {
+    text-align: center;
+    padding-left: 0 !important;
+  }
+
+  .clickable {
+    transition: all 0.8s;
+
+    &:hover {
+      box-shadow: #eef8fe 3px 3px 6px 0px inset,
+        rgba(178, 225, 255, 0.4) -3px -3px 6px 1px inset;
+      background-color: transparent;
+    }
+  }
+}
+
+td {
+  &.today .day-number-circle {
+    box-shadow: rgba(1, 116, 197, 0.4) 0px 2px 4px,
+      rgba(1, 116, 197, 0.3) 0px 7px 13px -3px,
+      rgba(1, 116, 197, 0.2) 0px -3px 0px inset;
+    margin: 3px;
+  }
+
+  &.clickable {
+    &:hover .day-number-circle {
+      margin: 10px 33px !important;
+      box-shadow: rgba(1, 116, 197, 0.15) 0px 15px 25px,
+        rgba(1, 116, 197, 0.05) 0px 25px 10px;
+      transition: all 0.5s;
+      transform: scale(1.2);
+    }
+
+    .day-number-circle {
+      transition: all 0.5s;
+      margin: 3px;
+    }
+
+    &:not(.today):hover .day-number-circle {
+      box-shadow: none !important;
+      transform: scale(1.4);
+      font-size: 18px;
+    }
+  }
+}
+
+.block_calendar_month > .card-body {
+  margin-bottom: 20px !important;
+}
+
+/* Botones importar exportar y calendario completo */
+
+.bottom > .footer-link > a:focus {
+  box-shadow: none !important;
+}
+
+/* Estilos calendario completo */
+
+.maincalendar .calendarmonth {
+  background-color: $colorBlanco;
+  border: 1px solid transparent;
+}
+
+.calendartable {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* Dropdown calendario */
+
+.btn-outline-secondary {
+  background-color: $colorBlanco;
+  border: 1px solid #8f959e;
+  border-radius: 4px !important;
+
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: $colorBlanco !important;
+    color: #6a737b !important;
+    border: 1px solid #8f959e;
+  }
+}
+
+select.custom-select {
+  cursor: pointer;
+  color: #6a737b;
+  transition: all 0.5s;
+
+  &:hover {
+    box-shadow: inset 0px -2px 5px -1px rgba(21, 157, 254, 0.4) !important;
+  }
+}
+
+/* Administracion del sitio */
+
+.simplesearchform {
+  display: inline !important;
+}
+
+/* Alertas de guardado */
+
+.alert-success {
+  transition: all 3s ease;
+  background-color: rgba(1, 197, 82, 0.3) !important;
+  box-shadow: rgba(1, 197, 82, 0.12) 0px 2px 4px 0px,
+    rgba(1, 197, 82, 0.32) 0px 2px 16px 0px;
+}
+
+.alert-danger {
+  transition: all 3s ease;
+  background-color: rgba(248, 1, 23, 0.5) !important;
+  box-shadow: rgba(248, 1, 23, 0.32) 0px 2px 4px 0px,
+    rgba(248, 1, 23, 0.52) 0px 2px 16px 0px;
+  color: $colorBlanco;
+}
+
+.alert-info {
+  background-color: rgba(179, 223, 255, 0.9);
+  box-shadow: rgba(189, 228, 254, 0.82) 0px 2px 4px 0px, 
+    rgba(189, 228, 254, 0.92) 0px 2px 16px 0px;
+}
+
+#user-notifications {
+  overflow: visible;
+}
+
+.btn-close {
+  &:focus {
+    box-shadow: none !important; 
+  }
+}
+
+/* Boton collapse y expand */
+
+a {
+  > {
+    .collapseall {
+      box-shadow: rgba(1, 111, 188, 0.6) 0px -5px,
+        rgba(1, 111, 188, 0.4) 0px -10px, rgba(1, 111, 188, 0.2) 0px -15px,
+        rgba(1, 111, 188, 0.1) 0px -20px, rgba(1, 111, 188, 0.05) 0px -25px;
+      transition: all 0.5s;
+      border-radius: 6px !important;
+      width: 110px !important;
+      padding: 4px;
+      text-align: center;
+
+      &:focus {
+        text-decoration: none !important;
+      }
+
+      &:hover {
+        color: $colorTSKlight !important;
+        box-shadow: rgba(1, 146, 247, 0.6) 0px -8px,
+          rgba(1, 146, 247, 0.4) 0px -14px, rgba(1, 146, 247, 0.2) 0px -20px,
+          rgba(1, 146, 247, 0.1) 0px -26px, rgba(1, 146, 247, 0.05) 0px -30px;
+      }
+    }
+
+    .expandall {
+      box-shadow: rgba(1, 111, 188, 0.6) 0px 5px,
+        rgba(1, 111, 188, 0.4) 0px 10px, rgba(1, 111, 188, 0.2) 0px 15px,
+        rgba(1, 111, 188, 0.1) 0px 20px, rgba(1, 111, 188, 0.05) 0px 25px;
+      transition: all 0.5s;
+      border-radius: 6px !important;
+      width: 110px !important;
+      padding: 4px;
+      text-align: center;
+
+      &:focus {
+        text-decoration: none !important;
+      }
+
+      &:hover {
+        color: $colorTSKlight !important;
+        box-shadow: rgba(1, 146, 247, 0.6) 0px 8px,
+          rgba(1, 146, 247, 0.4) 0px 14px, rgba(1, 146, 247, 0.2) 0px 20px,
+          rgba(1, 146, 247, 0.1) 0px 26px, rgba(1, 146, 247, 0.05) 0px 30px;
+      }
+    }
+  }
+
+  &.collapseexpand {
+    &:hover {
+      background: transparent !important;
+    }
+
+    &:focus {
+      color: $colorTSKlight !important;
+    }
+  }
+}
+
+/* Selector de archivos, subir archivo */
+
+.fm-empty-container,
+.filepicker-filelist {
+  background: white;
+
+  i {
+    transform: rotate(0deg) scale(1);
+    transition: all 0.5s ease;
+    text-shadow: none;
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  &:hover i {
+    transform: rotate(180deg) scale(1.3);
+    text-shadow: 0 4px 6px rgba(189, 228, 254, 0.9);
+    color: rgba(1, 146, 247, 0.9);
+  }
+}
+
+[id^="fp-repo"] > a {
+  transition: all 0.3s;
+
+  &.active {
+    color: $colorBlanco !important;
+    background-color: rgba(1, 116, 197, 0.8) !important;
+  }
+
+  &:hover {
+    box-shadow: rgba(1, 116, 197, 0.05) 0px -2px 2px,
+      rgba(1, 116, 197, 0.2) 0px 5px 8px;
+  }
+}
+
+/* Caja arrastrar archivos */
+
+.filepicker-filelist {
+  margin: 10px 0;
+}
+
+/* Inputs */
+
+[id^="searchinput-"],
+.form-control {
+  transition: all 0.5s;
+}
+
+[id^="searchinput-"]:hover,
+.form-control:hover {
+  box-shadow: 0 0 5px 5px rgba(21, 157, 254, 0.1),
+    0 0 2px 3px rgba(170, 225, 255, 0.2) !important;
+}
+
+[id^="searchinput-"]:focus,
+.form-control:focus {
+  box-shadow: 0 0 5px 5px rgba(21, 157, 254, 0.2),
+    0 0 2px 3px rgba(170, 225, 255, 0.3) !important;
+}
+
+.mform > .input-group:has(input[placeholder="Buscar"]) {
+  margin-bottom: 14px !important;
+}
+
+/* Calificaciones */
+
+.path-grade-report-grader .gradeparent {
+  .cell.category,
+  th.header#studentheader,
+  .heading .userfield {
+    vertical-align: middle !important;
+  }
+}
+
+/* Formato curso dropdown */
+
+.dropdown-menu.dropdown-menu-left.dialog-small.show {
+  overflow: auto;
+}
+
+.filters-dropdown {
+  will-change: auto !important;
+}
+
+
+/* Footer */
+
+.footer2 {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 0 75px 0 75px;
+  font-family: $fontTSKalt !important;
+  font-size: 88%;
+  color: $colorLetra;
+  opacity: 0.8;
+  background: $colorBlancoGris;
+  z-index: 2;
+}
+
+.copyright {
+  z-index: 3;
+  padding: 20px 0 0 0;
+  border-top: 1px solid rgba(12, 12, 12, 0.07);
+  font-size: 14px;
+  margin-left: 8px;
+
+  > p > span > a:hover {
+    text-decoration: none;
+  }
+}
+
+/* Modales */
+
+.modal-content {
+  background: $colorBlancoGris;
+}
+
+.form-check-input {
+  box-shadow: none !important;
+}
+
+.form-textarea,
+.form-control {
+  transition: all 0.5s ease;
+}
+
+.form-textarea:hover,
+.form-control:hover {
+  box-shadow: 0 0 5px 5px rgba(21, 157, 254, 0.1),
+    0 0 2px 3px rgba(170, 225, 255, 0.2) !important;
+}
+
+.form-textarea:hover .tox,
+.form-control:hover .tox {
+  box-shadow: 0 0 15px 1px rgba(21, 157, 254, 0.01),
+    0 0 15px 1px rgba(170, 225, 255, 0.07) !important;
+}
+
+.form-textarea:focus,
+.form-control:focus {
+  box-shadow: 0 0 5px 5px rgba(21, 157, 254, 0.2),
+    0 0 2px 3px rgba(170, 225, 255, 0.3) !important;
+}
+
+/* Animaciones */
+
+@keyframes grow {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes deGrow {
+  from {
+    transform: scale(1.2);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes medGrow {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes deMedGrow {
+  from {
+    transform: scale(1.1);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes miniGrow {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes deMiniGrow {
+  from {
+    transform: scale(1.05);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
